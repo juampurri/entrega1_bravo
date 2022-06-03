@@ -1,9 +1,10 @@
 {% extends "padre.html" %} {% load static %} {% block contenido %}
-<form action="">
+<form action="alta_curso" method="POST">
+  {% csrf_token %}}
   <p>Nombre:</p>
-  <input type="text" />
+  <input type="text" name="Nombre" required />
   <p>Camada:</p>
-  <input type="number" />
+  <input type="number" name="Camada" required />
 
   <input type="submit" value="Enviar" />
 </form>

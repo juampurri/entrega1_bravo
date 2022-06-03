@@ -31,11 +31,13 @@
     <!-- Navigation-->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="" href="#!">Inicio</a>
-        <a class="" href="#signup">Profesores</a>
-        <a class="" href="#signup">Cursos</a>
-        <a class="" href="#signup">Estudiantes</a>
-        <a class="" href="#signup">Entregables</a>
+        <a class="" href="/proyecto_coder/app_coder/template/padre.html"
+          >Inicio</a
+        >
+        <a class="" href="{% url 'profesores'%}">Profesores</a>
+        <a class="" href="{% url 'cursos'%}">Cursos</a>
+        <a class="" href="{% url 'alumnos' %}">Alumnos</a>
+        <a class="" href="#">Entregables</a>
         <a class="navbar-brand" href="#signup">JEJE</a>
       </div>
     </nav>
@@ -126,7 +128,9 @@
       </div>
     </header>
     <!-- Icons Grid-->
-    <main><h2 style="text-align: center">Welcome to my page</h2></main>
+
+    {% block contenido%} {% endblock %}
+    <main></main>
     <!-- Footer-->
     <footer class="footer bg-light">
       <div class="container">
